@@ -1,0 +1,17 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "name": "acf/example",
+    "title": "Example name",
+    "description": "Example description",
+    "category": "wp-lemon-blocks",
+    "icon": "desktop",
+    "keywords": ["Keyword", "Keyword", "Keyword", "Keyword"],
+    "apiVersion": 2,
+    "textdomain": "wp-lemon",
+    "acf": {
+        "mode": "preview"
+    },
+    "supports": {
+        "mode": false
+    }
+}
