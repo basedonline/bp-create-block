@@ -7,22 +7,21 @@
  * @subpackage WP_Lemon
  */
 
-namespace WP_Lemon\Blocks;
+namespace WP_Lemon\Child\Blocks;
 
 use HighGround\Bulldozer\BlockRendererV2 as BlockRenderer;
 
 /**
  * Example block that can be copied for making extra blocks.
- * Change the Example_Block class on rule 11 and below the class and uncomment the class call.
- * Don't include the render callback in the block register since we add that in our main BlockRenderer abstract class.
  *
- * Follow the API standard of https://www.advancedcustomfields.com/resources/acf_register_block_type/
+ * Follow the API standard of https://www.advancedcustomfields.com/resources/acf-blocks-with-block-json/
  */
 class Example_Block extends BlockRenderer
 {
 
    /**
     * The name of the block.
+    * This needs to be the same as the folder and file name.
     */
    const NAME = 'example';
 
@@ -36,10 +35,10 @@ class Example_Block extends BlockRenderer
     */
    public function block_context($context): array
    {
-      // $allowed_blocks  = apply_filters("wp-lemon/filter/block/{$this->slug}/allowed-blocks", ['core/heading', 'core/paragraph']);
+
 
       $args = [
-         // 'InnerBlocks'     => '<InnerBlocks allowedBlocks="' . esc_attr(wp_json_encode($allowed_blocks)) . '" />',
+         //'InnerBlocks' => self::create_inner_blocks(['core/heading', 'core/paragraph']),
       ];
 
       return array_merge($context, $args);
@@ -49,10 +48,8 @@ class Example_Block extends BlockRenderer
    /**
     * Register fields to the block.
     *
-    * The array is passed to the acf_register_block_type() function that registers the block with ACF.
-    *
     * @link https://github.com/StoutLogic/acf-builder
-    * @return FieldsBuilder
+    * @return StoutLogic\AcfBuilder\FieldsBuilder
     */
    public function add_fields(): object
    {
