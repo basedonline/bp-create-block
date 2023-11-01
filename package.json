@@ -1,6 +1,6 @@
 {
   "name": "bp-create-block",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "description": "Create new acf/twig block",
   "main": "index.js",
   "author": "Erik van der bas",
