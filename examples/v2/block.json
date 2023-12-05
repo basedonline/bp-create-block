@@ -6,7 +6,7 @@
     "category": "wp-lemon-blocks",
     "icon": "desktop",
     "keywords": ["Keyword", "Keyword", "Keyword", "Keyword"],
-    "apiVersion": 2,
+    "apiVersion": 3,
     "textdomain": "wp-lemon-child",
     "acf": {
         "mode": "preview"
