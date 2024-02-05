@@ -10,6 +10,7 @@
 namespace WP_Lemon\Child\Blocks;
 
 use HighGround\Bulldozer\BlockRendererV2 as BlockRenderer;
+use StoutLogic\AcfBuilder\FieldsBuilder;
 
 /**
  * Example block that can be copied for making extra blocks.
@@ -36,9 +37,8 @@ class Example_Block extends BlockRenderer
    public function block_context($context): array
    {
 
-
       $args = [
-         //'InnerBlocks' => self::create_inner_blocks(['core/heading', 'core/paragraph']),
+         // 'InnerBlocks' => self::create_inner_blocks(['core/heading', 'core/paragraph']),
       ];
 
       return array_merge($context, $args);
@@ -49,9 +49,9 @@ class Example_Block extends BlockRenderer
     * Register fields to the block.
     *
     * @link https://github.com/StoutLogic/acf-builder
-    * @return StoutLogic\AcfBuilder\FieldsBuilder
+    * @return FieldsBuilder
     */
-   public function add_fields(): object
+   public function add_fields(): FieldsBuilder
    {
       return $this->registered_fields;
    }
