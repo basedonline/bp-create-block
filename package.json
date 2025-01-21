@@ -1,6 +1,6 @@
 {
   "name": "bp-create-block",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "description": "Create new acf/twig block",
   "main": "index.js",
   "author": "Erik van der bas",
@@ -13,6 +13,7 @@
     "check-node-version": "^4.2.1",
     "colors": "^1.4.0",
     "commander": "^7.2.0",
+    "edit-json-file": "^1.8.0",
     "pascalcase": "^1.0.0",
     "prompt-sync": "^4.2.0",
     "shelljs": "^0.8.5"
